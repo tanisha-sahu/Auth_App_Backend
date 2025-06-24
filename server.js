@@ -23,6 +23,9 @@ mongoose
     process.exit(1);
   });
 
+app.get("/",(req,res)=>{
+  res.send("Hello");
+});
 app.use('/api/employee/auth', employeeAuthPublic);
 app.use('/api/employees', employeePrivate);
 app.use('/api/auth', authRoutes);
